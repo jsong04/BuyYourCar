@@ -12,15 +12,17 @@ import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingsScreen from './app/screens/ListingsScreen';
+import ListingEditScreen from './app/screens/ListingEditScreen';
 import LoginScreen from './app/screens/LoginScreen';
 import AppTextInput from './app/components/AppTextInput';
 import Form from './Form';
 import Login from './Login';
 import Main from './Main';
 import Signup from './Signup';
+import PlaySound from './PlaySound';
 
 export default function App() {
   return (
-    <LoginScreen />
+    <ListItem title="a" subTitle="b" image={require('./app/assets/me.jpg')} />
   );
 }
