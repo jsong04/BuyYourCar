@@ -3041,6 +3041,14 @@ expo-font@~8.4.0:
     fbjs "1.0.0"
     fontfaceobserver "^2.1.0"
 
+expo-image-picker@~9.2.0:
+  version "9.2.1"
+  resolved "https://registry.npm.taobao.org/expo-image-picker/download/expo-image-picker-9.2.1.tgz#113a46bfc8ef9bf675e8700b1bf7b8472f4de516"
+  integrity sha1-ETpGv8jvm/Z16HALG/e4Ry9N5RY=
+  dependencies:
+    expo-permissions "~10.0.0"
+    uuid "7.0.2"
+
 expo-keep-awake@~8.4.0:
   version "8.4.0"
   resolved "https://registry.npm.taobao.org/expo-keep-awake/download/expo-keep-awake-8.4.0.tgz?cache=0&sync_timestamp=1615341717371&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexpo-keep-awake%2Fdownload%2Fexpo-keep-awake-8.4.0.tgz#346d0988e6364c46050fef4b7829f302ef3e603d"
@@ -6346,6 +6354,11 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
+
+uuid@7.0.2:
+  version "7.0.2"
+  resolved "https://registry.npm.taobao.org/uuid/download/uuid-7.0.2.tgz?cache=0&sync_timestamp=1607460209394&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-7.0.2.tgz#7ff5c203467e91f5e0d85cfcbaaf7d2ebbca9be6"
+  integrity sha1-f/XCA0Z+kfXg2Fz8uq99LrvKm+Y=
 
 uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "buyyourcar-1617372757745",
+  "private_key_id": "5ad1c31c8e4f6acddc394767df7f535332375c1e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCwyT95nfAgQRxF\nKUhwnEhQ2q6N0axFRjw4/k2mDSS7mR5+3UyllzvIE9W9k2XwG8G3oYSDyl/tM4gB\nh9sBcfzCi3pa21+AqMW9JdFr+GfmLUMwPsaGKZw/JfyDjZbQz806GcFtqwQelkPv\notS0NyCEJsZFRszVKPFMcZopkxOQNGKHIqP0FEl5KQOyyS/kzvWd8rc3iv2Vt0t5\nZo7sbvQzH0IfcJWBld6eUbZqGihnSsgGlwN3uZ6liZZ2lUsXysMnGvgLbdsmhnKI\nsgUV4Di80TCj1RIRDDPrhMKcTEjjtNV7QnMAid9H29Kx8kXSgRbpG2fW5egpO555\n8Zv50GVpAgMBAAECggEAOlggv8V1I1/5sYWfZ7LcVvrlEt75CN/WLkUXYU8DKXqu\nStZEXn4b97s8FlXYFbdDZpRCxK/8mq8gGsk4aTCyZ45asjOmQDLzF6qshAK2X4ve\nmcSOBmcjLuAdh1kqRf3e0GcBpG0FbgbPov3NTzDGZXbahrCIF21svXrckw38LeHf\ngsjHBqmPhl0NAd0NoHgd/Mo2f8N4CdZEKLJPq3SEUPD/g/dAE7is2LScqYkSC5HT\n3f4pjLSttQYRxNwBQSlV0PaGBTteracCn/B45owpZkyKjGkPmfieo/wBJ1PE2GQ6\nJkAvpU6DQC5fTlbAgm62NMW4LHGfuAjfV1iZt0wThQKBgQDcrZYbWVFXvXCgplxe\nlFjyvBE2NiRpdu5wYGvMB8msoj21VS3nFE34pD5mCjXXtbBO4+wxrdSYxxEOGO1C\n+K/avOiMqChV7OKgR92xIE+QOM5YPfAJHWkXSDe4oxn4wdIQeWwrRIlnHZZSLtyv\nvSBUTZ8QFY4jGTDciXk40ZmPPwKBgQDNFSnM3oDryuMcPzBUf3bw3n5QrfUiHNcC\n/z4ahHzx/5Q+b7rgAg/THh9St2Lt8FLcRoqtrb76LbohSYy8lRpH5FoU/Pf+9S81\ny1UqD0isLerCzEfFOdhv/c2KVJtIu6Vbsmz0Bk5d+cu9XThr2cHzFOxuE3CBSDtv\nNxicKQiJVwKBgDAF/qKY/2CuszHiwjs64ViBoOVBRw9EeIMwGIVgNH1DGVa64LBm\n9MjlRUcDddApk+K3KxFsmNVejNGajxeB8xMRBTKG7bA1SuRCf3YqZ+Yk1pLRd8kk\nA1izuJyPsfk2hLZdFjMcSSKNh8b+t7vu1nhCJBll93af5sg3io/Y3SgVAoGBAJ8F\nFvltWmf7VOj1MkOC5rZUv3tNt/Mwi6QeSIiFTODUvZ1AQ5Yo4x5fkAgyfLplC8sT\nw7pyK9CPnnDrN/6OWud98D+v+5gtg+LhfHL1kPM5U3yiq9AJT4NfOH5XpmTaY5jb\nnFIHhcKmy81UuEggfJxBECc2WZlVagiNnz6PLrhXAoGAHJWjC4CL4zm/OCvKW4LJ\nLeCotY5Y6ty86bJ3HlPWDOmgYrMad7gzWxjeXHStAN8OFFWoFFEUGlFpgvWTZsIJ\nDQRsOLw/4HThY9z52SRsEj0ZKtDwi5TOySTlTGWI2nVVmoh+J2PWDw1uPN4Velcx\nhnxFwiJXZHmQpk+57lrrZpo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-dcl5hrga795r@buyyourcar-1617372757745.iam.gserviceaccount.com",
+  "client_id": "110788366422442750093",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-dcl5hrga795r%40buyyourcar-1617372757745.iam.gserviceaccount.com"
+}
