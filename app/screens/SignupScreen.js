@@ -22,8 +22,8 @@ export default function Signup ({ navigation }) {
   
     return (
       <SafeAreaView>
-      <View style={{alignItems: 'center', marginTop: 10, marginBottom: 10}}>
-        <AppText>Please fill out the following information:</AppText>
+      <View style={{alignItems: 'center', marginTop: 20}}>
+        <AppText style={{fontSize: 20, color: 'royalblue'}}>Please fill out the following information:</AppText>
       </View>
       <AppTextInput placeholder = "Name " />
       <AppTextInput placeholder = "Sex " />
@@ -32,7 +32,9 @@ export default function Signup ({ navigation }) {
       <AppTextInput placeholder = "Car budget " />
       <AppTextInput placeholder = "Email " />
       <AppTextInput placeholder = "Password " />
-      <LoadingButton title="Submit" color="red" onPress={() => console.log("Pressed!")} />
+      <View style={{marginVertical: 15}}>
+        <LoadingButton title="Submit" color="red" onPress={() => console.log("Pressed!")} />
+      </View>
     </SafeAreaView>
     );
   
