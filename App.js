@@ -25,23 +25,16 @@ import * as ImagePicker from 'expo-image-picker';
 import * as Permissions from 'expo-permissions';
 import ImageInput from './app/components/ImageInput';
 import ImageInputList from './app/components/ImageInputList';
+import { NavigationContainer } from '@react-navigation/native';
+import AuthNavigator from './app/navigation/AuthNavigator';
+import SignupScreen from './app/screens/SignupScreen';
 
 
 export default function App() {
-  const [imageUris, setImageUris] = useState([]);
-
-  const handleAdd = uri => {
-    setImageUris([...imageUris, uri]);
-  }
-
-  const handleRemove = uri => {
-    const uris = imageUris.filter(imageUri => imageUri != uri );
-    setImageUris(uris);
-  }
-
   return (
-    <Screen>
-      <ImageInputList imageUris={imageUris} onAddImage={handleAdd} onRemoveImage={handleRemove} />
-    </Screen>
+    // <NavigationContainer>
+    //   <AuthNavigator />
+    // </NavigationContainer>
+    <SignupScreen />
   );
 }
