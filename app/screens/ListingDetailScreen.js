@@ -5,19 +5,21 @@ import AppText from '../components/AppText';
 import ListItem from '../components/ListItem';
 import colors from '../config/colors';
 
-function ListingDetailScreen(props) {
+function ListingDetailScreen({ route }) {
     const orderImage = Image.resolveAssetSource(require('../assets/civic.jpg'));
     console.info(orderImage);
     let windowWidth = Dimensions.get('window').width;
     let windowHeight = Dimensions.get('window').height;
     let ratio = windowWidth / windowHeight;
+
+    const listing = route.params;
     
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={require('../assets/civic.jpg')}/>
+            <Image style={styles.image} source={listing.image}/>
             <View style={styles.detailContainer}>
-                <AppText style={styles.title}>Civic model 2013</AppText>
-                <AppText style={styles.price}>$12999</AppText>
+                <AppText style={styles.title}>{listing.title}</AppText>
+                <AppText style={styles.price}>${listing.price}</AppText>
                 <View style={styles.userContainer}>
                     <ListItem image={require('../assets/me.jpg')} title="Jingzheng" subTitle="甩卖" />
                 </View>

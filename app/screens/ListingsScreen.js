@@ -20,11 +20,16 @@ const listings = [
     }
 ];
 
-function ListingsScreen(props) {
+function ListingsScreen({ navigation }) {
     return (
         <Screen style={styles.screen}>
-            <FlatList data={listings} keyExtractor={listing => listing.id.toString()} renderItem={({ item }) => {
-                return <Card title={item.title} subTitle={"$" + item.price} image={item.image}  />
+            <FlatList showsVerticalScrollIndicator={false} data={listings} keyExtractor={listing => listing.id.toString()} renderItem={({ item }) => {
+                return <Card 
+                        title={item.title} 
+                        subTitle={"$" + item.price} 
+                        image={item.image}
+                        onPress={() => navigation.navigate("ListingDetails", item)}
+                          />
             }} />
         </Screen>
     );

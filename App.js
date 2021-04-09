@@ -18,7 +18,6 @@ import AppTextInput from './app/components/AppTextInput';
 import Form from './Form';
 import Login from './Login';
 import Main from './Main';
-import Signup from './Signup';
 import PlaySound from './PlaySound';
 import RecordSound from './RecordSound';
 import * as ImagePicker from 'expo-image-picker';
@@ -28,13 +27,14 @@ import ImageInputList from './app/components/ImageInputList';
 import { NavigationContainer } from '@react-navigation/native';
 import AuthNavigator from './app/navigation/AuthNavigator';
 import SignupScreen from './app/screens/SignupScreen';
+import NavigationTheme from './app/navigation/navigationTheme';
+import AppNavigator from './app/navigation/AppNavigator';
 
 
 export default function App() {
   return (
-    // <NavigationContainer>
-    //   <AuthNavigator />
-    // </NavigationContainer>
-    <SignupScreen />
+    <NavigationContainer theme={NavigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }
