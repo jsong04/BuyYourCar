@@ -6,7 +6,7 @@ import colors from '../config/colors';
 
 function WelcomeScreen({ navigation }) {
     return (
-        <ImageBackground blurRadius={5} style={styles.background} source={require('../assets/background.jpg')}>
+        <ImageBackground blurRadius={1} style={styles.background} source={require('../assets/background.jpg')}>
             <View style={styles.logoContainer}>
                 <Image source={require('../assets/logo.jpg')} style={styles.logo}/>
                 <Text style={styles.tagline}>The Best Online Car Platform</Text>
