@@ -3,6 +3,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import PlaySound from '../../PlaySound';
+import ASRScreen from '../screens/ASRScreen';
 import ListingEditScreen from '../screens/ListingEditScreen';
 import ComboNavigator from './ComboNavigator';
 import AccountNavigator from './AccountNavigator';
@@ -30,7 +31,7 @@ const AppNavigator = () => {
             />
             <Tab.Screen 
                 name="Search" 
-                component={PlaySound} 
+                component={ASRScreen} 
                 options={{
                     tabBarIcon: ({ color, size}) => <MaterialCommunityIcons 
                                         name="search-web" color={color} size={size} />
