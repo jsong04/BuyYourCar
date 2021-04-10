@@ -29,12 +29,29 @@ import AuthNavigator from './app/navigation/AuthNavigator';
 import SignupScreen from './app/screens/SignupScreen';
 import NavigationTheme from './app/navigation/navigationTheme';
 import AppNavigator from './app/navigation/AppNavigator';
+import AuthContext from './app/auth/context';
+import authStorage from './app/auth/storage';
+import jwtDecode from 'jwt-decode';
 
 
 export default function App() {
+  const [user, setUser] = useState();
+  
+  const restoreToken = async () => {
+    const token = await authStorage.getToken();
+    if (!token) return;
+    setUser(jwtDecode(token));
+  }
+  
+  useEffect(() => {
+    restoreToken();
+  }, []);
+
   return (
-    <NavigationContainer theme={NavigationTheme}>
-      <AppNavigator />
-    </NavigationContainer>
+    <AuthContext.Provider value={{user, setUser}}>
+      <NavigationContainer theme={NavigationTheme}>
+        {user ? <AppNavigator /> : <AuthNavigator />}
+      </NavigationContainer>
+    </AuthContext.Provider>
   );
 }
