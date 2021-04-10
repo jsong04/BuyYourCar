@@ -9,6 +9,7 @@ import axios from 'axios';
 import Constants from 'expo-constants';
 import AppText from '../components/AppText';
 import AppButton from '../components/AppButton';
+import useApi from '../hooks/useApi';
 const { manifest } = Constants;
 
 // const listings = [
@@ -27,26 +28,27 @@ const { manifest } = Constants;
 // ];
 
 function ListingsScreen({ navigation }) {
-    const [listings, setListings] = useState([]);
-    const [error, setError] = useState(false);
-    const [loading, setLoading] = useState(false);
+    // const [listings, setListings] = useState([]);
+    // const [error, setError] = useState(false);
+    // const [loading, setLoading] = useState(false);
+    const { data: listings, error, loading, request: load } = useApi(listingsApi.getListings);
 
     useEffect(() => {
         load();
     }, []);
 
-    const load = async () => {
-        setLoading(true);
-        const res = await listingsApi.getListings();
-        if (!res.ok) return setError(true);
-        setError(false);
-        // const res = await axios.get("http://192.168.1.4:7000/api/listings");
-        setLoading(false);
-        if (res) {
-            console.log(res);
-            setListings(res.data);
-        }
-    }
+    // const load = async () => {
+    //     setLoading(true);
+    //     const res = await listingsApi.getListings();
+    //     if (!res.ok) return setError(true);
+    //     setError(false);
+    //     // const res = await axios.get("http://192.168.1.4:7000/api/listings");
+    //     setLoading(false);
+    //     if (res) {
+    //         console.log(res);
+    //         setListings(res.data);
+    //     }
+    // }
 
     return (
         <Screen style={styles.screen}>
