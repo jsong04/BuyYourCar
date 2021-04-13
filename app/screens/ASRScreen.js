@@ -166,7 +166,7 @@ const ASRScreen = () => {
                     searchClient={searchClient}
                 >
                     <SearchBox query={query} onChange={handleQueryChange} />
-                    <Hits />
+                    {/* <Hits /> */}
                 </InstantSearch>
             </View>
         </SafeAreaView>

@@ -11,12 +11,12 @@ import colors from '../config/colors';
 
 const menuItems = [
     {
-        title: "My Listings",
+        title: "Recommendations",
         icon: {
             name: "format-list-bulleted",
             backgroundColor: colors.primary
         },
-        targetScreen: "Messages"
+        targetScreen: "MyListings"
     },
     {
         title: "My Messages",
@@ -26,6 +26,22 @@ const menuItems = [
         },
         targetScreen: "Messages"
     },
+    {
+        title: "Pay",
+        icon: {
+            name: "credit-card",
+            backgroundColor: "#00fa9a",
+        },
+        targetScreen: "Pay"
+    },
+    {
+        title: "Settings",
+        icon: {
+            name: "account-settings",
+            backgroundColor: colors.medium
+        },
+        targetScreen: "Settings"
+    }
 ]
 
 function AccountScreen({ navigation }) {
@@ -47,7 +63,7 @@ function AccountScreen({ navigation }) {
                     keyExtractor={menuItem => menuItem.title} 
                     renderItem={({ item }) => {
                     return <ListItem 
-                                onPress={() => navigation.navigate("Messages")}
+                                onPress={() => navigation.navigate(item.targetScreen)}
                                 title={item.title} 
                                 IconComponent={ <Icon name={item.icon.name} 
                                 backgroundColor={item.icon.backgroundColor}

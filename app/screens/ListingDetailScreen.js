@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 
+import AuthContext from '../auth/context';
 import AppText from '../components/AppText';
 import ListItem from '../components/ListItem';
 import colors from '../config/colors';
 
 function ListingDetailScreen({ route }) {
+    const { user, setUser } = useContext(AuthContext);
     const orderImage = Image.resolveAssetSource(require('../assets/civic.jpg'));
     console.info(orderImage);
     let windowWidth = Dimensions.get('window').width;
@@ -16,12 +18,12 @@ function ListingDetailScreen({ route }) {
     
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={listing.image}/>
+            <Image style={styles.image} source={{uri: listing.images[0].url}}/>
             <View style={styles.detailContainer}>
                 <AppText style={styles.title}>{listing.title}</AppText>
                 <AppText style={styles.price}>${listing.price}</AppText>
                 <View style={styles.userContainer}>
-                    <ListItem image={require('../assets/me.jpg')} title="Jingzheng" subTitle="甩卖" />
+                    <ListItem image={require('../assets/me.jpg')} title={user.name} subTitle={"budget: " + user.budget} />
                 </View>
             </View>
         </View>

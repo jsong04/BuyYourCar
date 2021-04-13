@@ -33,6 +33,8 @@ import AuthContext from './app/auth/context';
 import authStorage from './app/auth/storage';
 import jwtDecode from 'jwt-decode';
 import AppLoading from 'expo-app-loading';
+import FormImagePicker from './app/components/forms/FormImagePicker';
+import { AppFormPicker } from './app/components/forms';
 
 
 export default function App() {

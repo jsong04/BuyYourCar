@@ -24,9 +24,7 @@ function LoginScreen(props) {
             return setLoginFailed(true)
         }
         setLoginFailed(false);
-        console.log(res.data);
         const user = jwtDecode(res.data);
-        console.log(user);
         authContext.setUser(user);
         AuthStorage.storeToken(res.data);
     }

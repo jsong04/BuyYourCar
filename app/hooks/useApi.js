@@ -13,7 +13,6 @@ export default useApi = (apiFuction) => {
         // const res = await axios.get("http://192.168.1.4:7000/api/listings");
         setLoading(false);
         if (res) {
-            console.log(res);
             setData(res.data);
         }
     }
