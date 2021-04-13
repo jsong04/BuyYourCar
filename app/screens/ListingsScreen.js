@@ -31,6 +31,7 @@ function ListingsScreen({ navigation }) {
     // const [listings, setListings] = useState([]);
     // const [error, setError] = useState(false);
     // const [loading, setLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const { data: listings, error, loading, request: load } = useApi(listingsApi.getListings);
 
     useEffect(() => {
@@ -57,7 +58,13 @@ function ListingsScreen({ navigation }) {
                 <AppButton title="Reload" onPress={load} />
             </>}
             <ActivityIndicator animating={loading} size="large"/>
-            <FlatList showsVerticalScrollIndicator={false} data={listings} keyExtractor={listing => listing.id.toString()} renderItem={({ item }) => {
+            <FlatList 
+                showsVerticalScrollIndicator={false} 
+                data={listings} 
+                keyExtractor={listing => listing.id.toString()} 
+                refreshing={isLoading}
+                onRefresh={load}
+                renderItem={({ item }) => {
                 return <Card 
                         title={item.title} 
                         subTitle={"$" + item.price} 

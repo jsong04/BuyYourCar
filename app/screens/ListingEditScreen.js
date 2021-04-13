@@ -5,7 +5,7 @@ import * as Location from 'expo-location';
 import listingsApi from '../api/listings';
 import categoriesApi from '../api/categories';
 
-import { AppForm, AppFormField, AppFormPicker, SubmitButton } from '../components/forms';
+import { AppForm, AppFormField, AppFormPicker, SubmitButton, ErrorMessage } from '../components/forms';
 import ImageInputList from '../components/ImageInputList';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
@@ -56,6 +56,8 @@ function ListingEditScreen(props) {
     }, []);
 
     const handleSubmit = async (listing) => {
+        const data = {...listing, location};
+        console.log(data);
         const res = await listingsApi.addListings({ ...listing, location });
         if (!res.ok) return alert("Could not save the listing.");
         alert("Success!");
@@ -74,9 +76,9 @@ function ListingEditScreen(props) {
                 <FormImagePicker name="images" />
                 <AppFormField maxLength={255} name="title" placeholder="Title" />
                 <AppFormField keyboardType="numeric" maxLength={8} name="price" placeholder="Price" />
-                <AppFormPicker items={categories} name="brands" placeholder="Brands" />
+                <AppFormPicker items={categories} name="brand" placeholder="Brands" />
                 <AppFormField maxLength={255} multiline name="description" numberOflines={3} placeholder="Description" />
-                <AppButton title="Upload" color="royalblue" />
+                <SubmitButton title="Post"/>
             </AppForm>
         </Screen>
     );

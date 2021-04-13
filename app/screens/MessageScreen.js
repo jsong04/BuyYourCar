@@ -9,21 +9,21 @@ import Screen from '../components/Screen';
 const initialMessages = [
     {
         id: 1,
-        title: 'T1',
-        description: 'D1',
-        image: require('../assets/me.jpg')
+        title: 'Civic 2017 do you want it?',
+        description: 'Hi, I would like to sell my car',
+        image: require('../assets/avatar.png')
     },
     {
         id: 2,
-        title: 'T2',
-        description: 'D2',
-        image: require('../assets/me.jpg')
+        title: 'New BMW M6 lowest price on Internet',
+        description: 'Fairfax, Virginia',
+        image: require('../assets/miaowazhongzi.jpg')
     },
     {
         id: 3,
-        title: 'T3',
-        description: 'D3',
-        image: require('../assets/me.jpg')
+        title: 'Jeep 120,000 miles',
+        description: '$3599',
+        image: require('../assets/huge.jpg')
     }
 ];
 

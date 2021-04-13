@@ -26,8 +26,9 @@ function ListingScreen({ navigation }) {
     }, []);
 
     const handleDelete = listing => {
-        const newListings = listings.filter(l => l.id !== listing.id);
-        setMessages(newListings);
+        const newListings = filteredListings.filter(l => l.id !== listing.id);
+        console.log(newListings);
+        setFilteredListings(newListings);
     }
 
     const getMyListings = async () => {
