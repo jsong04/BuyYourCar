@@ -10,7 +10,7 @@ import useApi from '../hooks/useApi';
 import AuthContext from '../auth/context';
 import axios from 'axios';
 
-const baseUrl = 'http://172.22.112.165:7000/api/';
+const baseUrl = 'http://172.22.112.53:7000/api/';
 
 function ListingScreen({ navigation }) {
     // const [listings, setListings] = useState();

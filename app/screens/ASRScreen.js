@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ActivityIndicator, FlatList } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import FadeInView from '../components/search/FadeInView'
 import { Audio } from 'expo-av';
@@ -31,7 +31,8 @@ const recordingOptions = {
     ios: {
         extension: '.wav',
         audioQuality: Audio.RECORDING_OPTION_IOS_AUDIO_QUALITY_HIGH,
-        sampleRate: 44100,
+        // sampleRate: 44100,
+        sampleRate: 16000,
         numberOfChannels: 1,
         bitRate: 128000,
         linearPCMBitDepth: 16,
@@ -62,6 +63,7 @@ const ASRScreen = () => {
     const getTranscription = async () => {
         setIsFetching(true);
         try {
+            console.log("recordingURI: ", recording.getURI());
             const info = await FileSystem.getInfoAsync(recording.getURI());
             console.log(`FILE INFO: ${JSON.stringify(info)}`);
             const uri = info.uri;
@@ -166,7 +168,8 @@ const ASRScreen = () => {
                     searchClient={searchClient}
                 >
                     <SearchBox query={query} onChange={handleQueryChange} />
-                    {/* <Hits /> */}
+                    <Hits filter={query} />
+                    {/* <FlatList /> */}
                 </InstantSearch>
             </View>
         </SafeAreaView>

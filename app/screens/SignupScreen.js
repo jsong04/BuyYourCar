@@ -24,7 +24,7 @@ const validationSchema = Yup.object().shape({
   budget: Yup.number().required().min(2000).max(1000000).label("Budget"),
 });
 
-const baseUrl = 'http://172.22.112.165:7000/api/'
+const baseUrl = 'http://172.22.112.53:7000/api/'
 
 function RegisterScreen() {
   const registerApi = useApi(usersApi.register);

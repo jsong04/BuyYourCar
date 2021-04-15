@@ -13,6 +13,7 @@ class FadeInView extends React.Component {
                 {
                     toValue: 1,
                     duration: 1400,
+                    useNativeDriver: false
                 },
             )
         ).start();
