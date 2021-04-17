@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { View, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, Image, StyleSheet, Dimensions, ScrollView } from 'react-native';
 
 import AuthContext from '../auth/context';
 import AppText from '../components/AppText';
@@ -15,10 +15,13 @@ function ListingDetailScreen({ route }) {
     let ratio = windowWidth / windowHeight;
 
     const listing = route.params;
-    
-    return (
+        return (
         <View style={styles.container}>
+        <ScrollView>
             <Image style={styles.image} source={{uri: listing.images[0].url}}/>
+            <Image style={styles.image} source={{uri: listing.images[0].url.split('_')[0]+'_side.jpg'}}/>
+            <Image style={styles.image} source={{uri: listing.images[0].url.split('_')[0]+'_back.jpg'}}/>
+            </ScrollView>
             <View style={styles.detailContainer}>
                 <AppText style={styles.title}>{listing.title}</AppText>
                 <AppText style={styles.price}>${listing.price}</AppText>
