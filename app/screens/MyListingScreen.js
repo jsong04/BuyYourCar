@@ -35,6 +35,9 @@ function ListingScreen({ navigation }) {
         console.log(baseUrl + "recommendation?budget=" + user.budget);
         const res = await axios.get(baseUrl + "recommendation?budget=" + user.budget);
         console.log(res.data);
+        res.data.sort(function(a,b) {
+            return (a["title"].indexOf('BMW') >= 0 || a["title"].indexOf('Toyota') >= 0) ? -1 : 1;
+        })
         setFilteredListings(res.data);
     }
 
